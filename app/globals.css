@@ -26,13 +26,15 @@
   background-image: url("/hero.jpg");
   background-size: cover;
   background-position: center;
+  opacity: 0.75;
 }
 
 .nav-link {
   position: relative;
 }
 
-.nav-link::before {
+.nav-link::before,
+.nav-parent:hover .nav-link::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -45,7 +47,8 @@
   transition: transform 0.5s ease;
 }
 
-.nav-link:hover::before {
+.nav-link:hover::before,
+.nav-parent:hover .nav-link::before {
   transform-origin: bottom left;
   transform: scaleX(1);
 }

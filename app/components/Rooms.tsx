@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Rooms = () => {
   return (
-    <div className="flex flex-col items-center gap-8 text-slate-900 mt-[8rem] md:p-[4rem]">
+    <div className="flex flex-col items-center gap-8 text-slate-900 md:p-[4rem]">
       <div className="flex flex-col items-start gap-4 p-4">
         <h1 className="text-xl font-bold">Les Chambres</h1>
         <span className="text-2xl">
@@ -13,8 +13,8 @@ export const Rooms = () => {
       </div>
       <div className="flex flex-col gap-4">
         <div className="card flex flex-col md:flex-row text-xl font-bold items-center gap-4 p-6">
-          <div className="flex flex-col gap-12 w-[28rem]">
-            <div className="badge flex justify-around gap-2 p-3 rounded-full bg-slate-300">
+          <div className="flex flex-col gap-16 w-[28rem]">
+            <div className="badge flex justify-between gap-2 p-3 bg-slate-300">
               <span>4.4</span>
               <div className="flex gap-1">
                 <Star className="w-6 h-6 stroke-slate-800 fill-slate-800" />
@@ -40,11 +40,13 @@ export const Rooms = () => {
               <span>Wifi disponible</span>
             </div>
             <div className="cta flex gap-3 p-1">
-              <button className="btn btn-primary text-white bg-slate-700 hover:scale-[0.96] text-[14px] font-semibold transition-transform px-4 py-4 rounded-[2rem]">
-                Découvrir la Chambre
+              <button className="text-white bg-slate-700 hover:scale-[0.96] text-[14px] font-semibold transition-transform px-4 py-4">
+                <span className="text-center">Découvrir la Chambre</span>
               </button>
-              <button className="btn btn-primary text-slate-900 bg-transparent border-2 border-slate-900 hover:scale-[0.96] text-[14px] font-semibold transition-transform px-4 py-4 rounded-[2rem]">
-                Contacter l&apos;hôte
+              <button className="nav-parent text-slate-900 bg-slate-50 border-2 border-slate-900 hover:scale-[0.96] text-[14px] font-semibold transition-transform px-4 py-4">
+                <span className="nav-link text-center">
+                  Contacter l&apos;hôte
+                </span>
               </button>
             </div>
           </div>

@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const Navbar = () => {
-  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [prevScrollpos, setPrevScrollpos] = useState(window.scrollY);
   const [top, setTop] = useState(0);
   useEffect(() => {
     // Function to handle scroll events
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       if (currentScrollPos > 100) {
         if (prevScrollpos > currentScrollPos) {
           setTop(0); // Show navbar
@@ -27,12 +27,12 @@ export const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollpos]);
-  const navbarStyle = {
+  const navbarStyle: React.CSSProperties = {
     position: "fixed",
     top: `${top}px`,
     width: "100%",
     display: "flex",
-    transition: "top 0.3s",
+    transition: "top 0.7s",
   };
   return (
     <>
